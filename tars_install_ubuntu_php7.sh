@@ -26,7 +26,7 @@ build_cpp_framework(){
 	unzip -a master.zip && mv Tars-master Tars && rm -f /root/master.zip
 	mkdir -p /usr/local/mysql/lib && ln -s /usr/include/mysql /usr/local/mysql/include
 	ln -s /usr/lib/x86_64-linux-gnu/libmariadbclient.so.*.*.* /usr/local/mysql/lib/libmysqlclient.a
-	cd /root/Tars/cpp/thirdparty && wget -c -t 0 https://github.com/Tencent/rapidjson/archive/master.zip -O master.zip
+	mkdir -p /root/Tars/cpp/thirdparty && cd /root/Tars/cpp/thirdparty && wget -c -t 0 https://github.com/Tencent/rapidjson/archive/master.zip -O master.zip
 	unzip -a master.zip && mv rapidjson-master rapidjson && rm -f master.zip
 	mkdir -p /data && chmod u+x /root/Tars/cpp/build/build.sh
 	# 支持JDK 10
