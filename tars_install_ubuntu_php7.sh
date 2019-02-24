@@ -63,7 +63,7 @@ build_php_tars(){
 build_java_framework(){
 	# 获取并安装JDK
 	mkdir -p /root/init && cd /root/init/
-	wget -c -t 0 --header "Cookie: oraclelicense=accept" -c --no-check-certificate http://download.oracle.com/otn-pub/java/jdk/10.0.2+13/19aef61b38124481863b1413dce1855f/jdk-10.0.2_linux-x64_bin.tar.gz
+	wget -c -t 0 --header "Cookie: oraclelicense=accept" -c --no-check-certificate http://101.44.1.8/files/406700000752D161/download.oracle.com/otn-pub/java/jdk/10.0.2+13/19aef61b38124481863b1413dce1855f/jdk-10.0.2_linux-x64_bin.tar.gz
 	tar zxf /root/init/jdk-10.0.2_linux-x64_bin.tar.gz && rm -rf /root/init/jdk-10.0.2_linux-x64_bin.tar.gz
 	mkdir /usr/java && mv /root/init/jdk-10.0.2 /usr/java
 	echo "export JAVA_HOME=/usr/java/jdk-10.0.2" >> /etc/profile
